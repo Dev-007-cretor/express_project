@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF to Word Converter</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f0f8ff;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    form.Form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .int {
+      padding: 10px;
+      background-color: #e0f7fa;
+      border: 2px solid #00bcd4;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0097a7;
+    }
+
+    a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    p {
+      color: rgb(4, 255, 0);
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Convert PDF to Word</h1>
+
+ 
+
+  <form class="Form" action="/convert" method="POST" enctype="multipart/form-data">
+    <input class="int" type="file" name="pdf" accept=".pdf" required>
+    <button class="btn" type="submit">Convert</button>
+  </form>
+
+  <% if (downloadLink) { %>
+    <a href="<%= downloadLink %>">Download Converted Word File</a>
+  <% } %>
+</body>
+</html>
