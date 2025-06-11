@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "echo 'Installing Python dependencies...' && pip install -r requirements.txt",
     "start": "node express.js",
     "dev": "nodemon express"
   },
